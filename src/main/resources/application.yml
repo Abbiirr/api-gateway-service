@@ -7,10 +7,10 @@ spring:
   cloud:
     gateway:
       routes:
-        - id: EPLOYEE-SERVICE
-          uri: lb://EPLOYEE-SERVICE
+        - id: PRODUCT-SERVICE
+          uri: http://localhost:8089/api/product
           predicates:
-            - Path=/employees/**
+            - Path=http://localhost:8089/api/product**
 
 eureka:
   client:
